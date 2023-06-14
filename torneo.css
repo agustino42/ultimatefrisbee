@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 7%;
+    background: #eee;
+    min-height: 100vh;
+    gap: 15px;
+    padding-bottom: 80px;
+}
+
+.container .content{
+    flex: 1 1 500px;
+}
+
+.container .image{
+    flex: 1 1 750px;
+  
+}
+
+.container .image img{
+    width: 100%;
+ 
+}
+
+.container .content .title{
+    font-size: 45px;
+    text-transform: uppercase;
+    color: blueviolet;
+}
+ 
+.container .content p{
+    color: black;
+    padding: 5px 0;
+}
+ 
+.container .content .count-down{
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+ 
+.container .content .count-down .box{
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #3333;
+    text-align: center;
+    flex: 1 1 20px;
+}
+
+.container .content .count-down .box h3{
+    font-size: 50px;
+    color: #333;
+}
+
+.container .content .count-down .box span{
+    color: #2980b9;
+    font-size: 20px;
+   
+}
+
+.container .content .btn{
+    display: inline-block;
+    padding: 8px 50px;
+    margin: 10px 0;
+    font-size: 17px;
+    background: #2980b9;
+    color: #fff;
+    transition: .2s ease-in-out;
+   align-content: center;
+}
+
+
+@media (max-width:500px){
+    .container{
+        padding: 20px;
+    }
+
+    .container .content{
+        text-align: center;
+    }
+
+    .container .content .title{
+        font-size: 35px;
+    }
+
+    .container .content p{
+        font-size: 14px;
+    }
+
+    .container .content .count-down{
+        gap: 5px;
+    }
+
+    .container .content .count-down .box h3{
+        font-size: 30px;
+    }
+
+    .container .content .count-down .box span{
+        font-size: 15px;
+    }
+}
+
+.wrapper{
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+}
+ .wrapper .icon{
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55,0.265,1.55);
+ }
+
+ .wrapper .tooltip{
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #333;
+    padding: 5px 8px;
+    border-radius: 3px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .wrapper .tooltip ::before{
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #2980b9;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55,0.265,1.55);
+ }
+
+ .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+ }
