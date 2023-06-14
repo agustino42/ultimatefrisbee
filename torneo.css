@@ -84,7 +84,7 @@
 }
 
 
-@media (max-width:500px){
+@media (max-width:767px){
     .container{
         padding: 20px;
     }
